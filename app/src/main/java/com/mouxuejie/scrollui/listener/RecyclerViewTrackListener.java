@@ -1,4 +1,4 @@
-package com.mouxuejie.scrollui.scroll;
+package com.mouxuejie.scrollui.listener;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

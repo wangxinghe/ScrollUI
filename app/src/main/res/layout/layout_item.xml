@@ -5,8 +5,9 @@
     <TextView
         android:id="@+id/item_tv"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="This is top view"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:layout_alignParentTop="true"
         android:textSize="18dp"
