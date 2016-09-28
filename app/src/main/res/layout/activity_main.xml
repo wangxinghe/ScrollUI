@@ -14,4 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Grid_Recycler_View"/>
+
+    <Button
+        android:id="@+id/staggered_grid_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grid_Recycler_View"/>
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private Button mLinearButton;
     private Button mGridButton;
+    private Button mStaggeredGridButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         mLinearButton = (Button)findViewById(R.id.linear_recycler_view);
         mGridButton = (Button)findViewById(R.id.grid_recycler_view);
+        mStaggeredGridButton = (Button)findViewById(R.id.staggered_grid_recycler_view);
         mLinearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, GridActivity.class));
+            }
+        });
+        mStaggeredGridButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, StaggeredGridActivity.class));
             }
         });
     }
