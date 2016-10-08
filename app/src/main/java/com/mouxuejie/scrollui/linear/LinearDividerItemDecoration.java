@@ -3,7 +3,11 @@ package com.mouxuejie.scrollui.linear;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,12 +22,18 @@ public class LinearDividerItemDecoration extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = new int[]{
             android.R.attr.listDivider
     };
+
+    private Paint mPaint;
     private Drawable mDivider;
     private int mOrientation;
 
     public LinearDividerItemDecoration(Context context, int orientation) {
         resolveDivider(context);
         mOrientation = orientation;
+        LinearGradient linearGradient = new LinearGradient(0, 0, 0, 500, new int[]{Color.BLACK, 0},
+                null, Shader.TileMode.CLAMP);
+        mPaint = new Paint();
+        mPaint.setShader(linearGradient);
     }
 
     private void resolveDivider(Context context) {
@@ -40,6 +50,12 @@ public class LinearDividerItemDecoration extends RecyclerView.ItemDecoration {
         } else {
             drawVerticalDividers(c, parent);
         }
+    }
+
+    @Override
+    public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
+        super.onDrawOver(c, parent, state);
+        c.drawRect(0, 0, parent.getRight(), 500, mPaint);
     }
 
     private void drawHorizontalDividers(Canvas c, RecyclerView parent) {
