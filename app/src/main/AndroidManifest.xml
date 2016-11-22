@@ -19,7 +19,10 @@
         <activity android:name=".LinearActivity"/>
         <activity android:name=".GridActivity"/>
         <activity android:name=".StaggeredGridActivity"/>
-
+        <activity android:name=".imageview.ImageActivity"/>
+        <activity android:name=".scrollview.ScrollViewActivity"/>
+        <activity android:name=".scrollview.MyScrollViewActivity"/>
+        <activity android:name=".canvas.CanvasActivity"/>
     </application>
 
 </manifest>

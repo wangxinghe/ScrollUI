@@ -26,4 +26,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Grid_Recycler_View"/>
+    
+    <Button
+        android:id="@+id/image_view_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image_View"/>
+
+    <Button
+        android:id="@+id/nest_scroll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nest_Scroll_View"/>
+
+    <Button
+        android:id="@+id/canvas_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Canvas_View"/>
+
 </LinearLayout>
