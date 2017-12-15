@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.mouxuejie.scrollui.canvas.CanvasActivity;
 import com.mouxuejie.scrollui.imageview.ImageActivity;
+import com.mouxuejie.scrollui.rsa.RSAActivity;
 import com.mouxuejie.scrollui.scrollview.MyScrollViewActivity;
 
 public class MainActivity extends AppCompatActivity {
+    private Button mRecyclerVSListButton;
     private Button mLinearButton;
     private Button mGridButton;
     private Button mStaggeredGridButton;
@@ -24,12 +25,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mRecyclerVSListButton = (Button)findViewById(R.id.recycler_view_vs_list_view);
         mLinearButton = (Button)findViewById(R.id.linear_recycler_view);
         mGridButton = (Button)findViewById(R.id.grid_recycler_view);
         mStaggeredGridButton = (Button)findViewById(R.id.staggered_grid_recycler_view);
         mImageViewButton = (Button)findViewById(R.id.image_view_button);
         mNestScrollButton = (Button)findViewById(R.id.nest_scroll_button);
         mCanvasButton = (Button)findViewById(R.id.canvas_button);
+        mRecyclerVSListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecyclerVSListActivity.jump(MainActivity.this);
+            }
+        });
         mLinearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         mCanvasButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CanvasActivity.class));
+                startActivity(new Intent(MainActivity.this, RSAActivity.class));
             }
         });
     }

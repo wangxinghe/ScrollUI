@@ -55,7 +55,7 @@ public class LinearDividerItemDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
         super.onDrawOver(c, parent, state);
-        c.drawRect(0, 0, parent.getRight(), 500, mPaint);
+//        c.drawRect(0, 0, parent.getRight(), 500, mPaint);
     }
 
     private void drawHorizontalDividers(Canvas c, RecyclerView parent) {
